@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!--------- <title>Responsive Navigation Menu</title>------>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url("../img/back.jpeg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    nav {
+        display: flex;
+        height: 70px;
+        width: 100%;
+        background: #242869;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px 0 100px;
+        flex-wrap: wrap;
+    }
+    
+    nav .logo {
+        color: #fff;
+        font-size: 35px;
+        font-weight: 600;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+    
+    nav ul li {
+        margin: 0 5px;
+    }
+    
+    nav ul li a {
+        color: #f2f2f2;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 8px 15px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+    
+    nav ul li a.active,
+    nav ul li a:hover {
+        color: #111;
+        background: #fff;
+    }
+    
+    nav .menu-btn i {
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    input[type="checkbox"] {
+        display: none;
+    }
+    
+    @media (max-width: 1000px) {
+        nav {
+            padding: 0 40px 0 50px;
+        }
+    }
+    
+    @media (max-width: 920px) {
+        nav .menu-btn i {
+            display: block;
+        }
+        #click:checked~.menu-btn i:before {
+            content: "\f00d";
+        }
+        nav ul {
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            background: #242869;
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        #click:checked~ul {
+            left: 0;
+        }
+        nav ul li {
+            width: 100%;
+            margin: 40px 0;
+        }
+        nav ul li a {
+            width: 100%;
+            margin-left: -100%;
+            display: block;
+            font-size: 20px;
+            transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        #click:checked~ul li a {
+            margin-left: 0px;
+        }
+        nav ul li a.active,
+        nav ul li a:hover {
+            background: none;
+            color: rgb(0, 102, 255);
+        }
+    }
+    
+    .text {
+        position: center;
+        padding-left: 50px;
+        padding-top: 200px;
+    }
+    
+    .text h3 {
+        font-size: 3em;
+        font-weight: 500;
+        color: #242869;
+        line-height: 1em;
+        text-transform: none;
+    }
+    
+    .text p {
+        font-size: 1.1em;
+        color: #18183f;
+        margin: 20px 0;
+        font-weight: 400;
+        max-width: 700px;
+    }
+    
+    .text a {
+        display: inline-block;
+        border-radius: 5px;
+        font-size: 1em;
+        background: #242869;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 10px;
+        color: #fff;
+        letter-spacing: 2px;
+        transition: 0.2s;
+    }
+    
+    .text a:hover {
+        letter-spacing: 6px;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="logo">EMR</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+        <ul>
+            <li><a class="active" href="signup.html">Sign up</a></li>
+            <li><a href="Login.html">Log in </a></li>
+            <li><a href="About.html">About us</a></li>
+        </ul>
+    </nav>
+    <div class="text">
+        <h3>
+            Explore our new worled
+        </h3>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        </p>
+        <a href="Explore.html"> Explore</a>
+    </div>
+
+</body>
+
+</html>
